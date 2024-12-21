@@ -1,5 +1,5 @@
 from django import forms
-from netbox.forms import NetBoxModelForm, NetBoxModelImportForm
+from netbox.forms import NetBoxModelForm, NetBoxModelBulkEditForm, NetBoxModelImportForm
 import netbox_virtualization_plus.models as models
 
 #
@@ -18,7 +18,7 @@ class VMSnapshotForm(NetBoxModelForm):
         )
 
 
-class VMSnapshotBulkEditForm(BulkEditForm):
+class VMSnapshotBulkEditForm(NetBoxModelBulkEditForm):
     pk = forms.ModelMultipleChoiceField(
         queryset=models.VMSnapshot.objects.all(),
         widget=forms.MultipleHiddenInput
@@ -53,7 +53,7 @@ class DatastoreForm(NetBoxModelForm):
         )
 
 
-class DatastoreBulkEditForm(BulkEditForm):
+class DatastoreBulkEditForm(NetBoxModelBulkEditForm):
     pk = forms.ModelMultipleChoiceField(
         queryset=models.Datastore.objects.all(),
         widget=forms.MultipleHiddenInput()
@@ -89,7 +89,7 @@ class VirtualDiskExtensionForm(NetBoxModelForm):
         fields = ('virtual_disk', 'datastore', 'notes')
 
 
-class VirtualDiskExtensionBulkEditForm(BulkEditForm):
+class VirtualDiskExtensionBulkEditForm(NetBoxModelBulkEditForm):
     pk = forms.ModelMultipleChoiceField(
         queryset=models.VirtualDiskExtension.objects.all(),
         widget=forms.MultipleHiddenInput()
@@ -118,7 +118,7 @@ class VirtualSwitchForm(NetBoxModelForm):
         fields = ('name', 'cluster', 'switch_type', 'version', 'description')
 
 
-class VirtualSwitchBulkEditForm(BulkEditForm):
+class VirtualSwitchBulkEditForm(NetBoxModelBulkEditForm):
     pk = forms.ModelMultipleChoiceField(
         queryset=models.VirtualSwitch.objects.all(),
         widget=forms.MultipleHiddenInput()
@@ -150,7 +150,7 @@ class VirtualNetworkForm(NetBoxModelForm):
         )
 
 
-class VirtualNetworkBulkEditForm(BulkEditForm):
+class VirtualNetworkBulkEditForm(NetBoxModelBulkEditForm):
     pk = forms.ModelMultipleChoiceField(
         queryset=models.VirtualNetwork.objects.all(),
         widget=forms.MultipleHiddenInput()
@@ -185,7 +185,7 @@ class VirtualSwitchUplinkForm(NetBoxModelForm):
         )
 
 
-class VirtualSwitchUplinkBulkEditForm(BulkEditForm):
+class VirtualSwitchUplinkBulkEditForm(NetBoxModelBulkEditForm):
     pk = forms.ModelMultipleChoiceField(
         queryset=models.VirtualSwitchUplink.objects.all(),
         widget=forms.MultipleHiddenInput()
@@ -217,7 +217,7 @@ class VMInterfaceExtensionForm(NetBoxModelForm):
         fields = ('vm_interface', 'vlan_id', 'virtual_network', 'notes')
 
 
-class VMInterfaceExtensionBulkEditForm(BulkEditForm):
+class VMInterfaceExtensionBulkEditForm(NetBoxModelBulkEditForm):
     pk = forms.ModelMultipleChoiceField(
         queryset=models.VMInterfaceExtension.objects.all(),
         widget=forms.MultipleHiddenInput()
@@ -250,7 +250,7 @@ class ResourcePoolForm(NetBoxModelForm):
         fields = ('name', 'cluster', 'pool_type', 'description')
 
 
-class ResourcePoolBulkEditForm(BulkEditForm):
+class ResourcePoolBulkEditForm(NetBoxModelBulkEditForm):
     pk = forms.ModelMultipleChoiceField(
         queryset=models.ResourcePool.objects.all(),
         widget=forms.MultipleHiddenInput()
@@ -278,7 +278,7 @@ class ResourceSchedulingForm(NetBoxModelForm):
         )
 
 
-class ResourceSchedulingBulkEditForm(BulkEditForm):
+class ResourceSchedulingBulkEditForm(NetBoxModelBulkEditForm):
     pk = forms.ModelMultipleChoiceField(
         queryset=models.ResourceScheduling.objects.all(),
         widget=forms.MultipleHiddenInput()
@@ -310,7 +310,7 @@ class HighAvailabilityForm(NetBoxModelForm):
         )
 
 
-class HighAvailabilityBulkEditForm(BulkEditForm):
+class HighAvailabilityBulkEditForm(NetBoxModelBulkEditForm):
     pk = forms.ModelMultipleChoiceField(
         queryset=models.HighAvailability.objects.all(),
         widget=forms.MultipleHiddenInput()

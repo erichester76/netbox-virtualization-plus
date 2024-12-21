@@ -5,7 +5,7 @@ __email__ = "hester1@clemson.edu"
 __version__ = "0.1"
 
 class VirtualizationPlusConfig(PluginConfig):
-    name = 'virtualization_plus'
+    name = 'netbox_virtualization_plus'
     verbose_name = 'Virtualization+'
     description = 'Additional virtualization features'
     version = '0.1'

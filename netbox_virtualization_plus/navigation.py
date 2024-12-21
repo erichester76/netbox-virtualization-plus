@@ -18,22 +18,6 @@ items = (
         ]
     ),
     PluginMenuItem(
-        link='plugins:netbox_virtualization_plus:virtualdiskextension_list',
-        link_text='Virtual Disk Extensions',
-        buttons=[
-            PluginMenuButton(
-                link='plugins:netbox_virtualization_plus:virtualdiskextension_add',
-                title='Add Disk Extension',
-                icon_class='mdi mdi-plus-thick',
-            ),
-            PluginMenuButton(
-                link='plugins:netbox_virtualization_plus:virtualdiskextension_import',
-                title='Import Disk Extensions',
-                icon_class='mdi mdi-upload',
-            )
-        ]
-    ),
-    PluginMenuItem(
         link='plugins:netbox_virtualization_plus:virtualswitch_list',
         link_text='Virtual Switches',
         buttons=[
@@ -61,38 +45,6 @@ items = (
             PluginMenuButton(
                 link='plugins:netbox_virtualization_plus:virtualnetwork_import',
                 title='Import Virtual Networks',
-                icon_class='mdi mdi-upload',
-            )
-        ]
-    ),
-    PluginMenuItem(
-        link='plugins:netbox_virtualization_plus:virtualswitchuplink_list',
-        link_text='Switch Uplinks',
-        buttons=[
-            PluginMenuButton(
-                link='plugins:netbox_virtualization_plus:virtualswitchuplink_add',
-                title='Add Switch Uplink',
-                icon_class='mdi mdi-plus-thick',
-            ),
-            PluginMenuButton(
-                link='plugins:netbox_virtualization_plus:virtualswitchuplink_import',
-                title='Import Switch Uplinks',
-                icon_class='mdi mdi-upload',
-            )
-        ]
-    ),
-    PluginMenuItem(
-        link='plugins:netbox_virtualization_plus:vminterfaceextension_list',
-        link_text='VM Interface Extensions',
-        buttons=[
-            PluginMenuButton(
-                link='plugins:netbox_virtualization_plus:vminterfaceextension_add',
-                title='Add Interface Extension',
-                icon_class='mdi mdi-plus-thick',
-            ),
-            PluginMenuButton(
-                link='plugins:netbox_virtualization_plus:vminterfaceextension_import',
-                title='Import Interface Extensions',
                 icon_class='mdi mdi-upload',
             )
         ]

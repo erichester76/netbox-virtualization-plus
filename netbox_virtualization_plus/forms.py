@@ -1,6 +1,7 @@
 from django import forms
 from netbox.forms import NetBoxModelForm, NetBoxModelBulkEditForm, NetBoxModelImportForm
 import netbox_virtualization_plus.models as models
+from ipam.models import VLAN
 
 #
 # VMSnapshot
@@ -223,7 +224,7 @@ class VMInterfaceExtensionBulkEditForm(NetBoxModelBulkEditForm):
         widget=forms.MultipleHiddenInput()
     )
     vlan = forms.ModelChoiceField(
-        queryset=models.Vlan.objects.all(),
+        queryset=VLAN.objects.all(),
         required=False
     )
     virtual_network = forms.ModelChoiceField(
@@ -238,7 +239,7 @@ class VMInterfaceExtensionBulkEditForm(NetBoxModelBulkEditForm):
 class VMInterfaceExtensionImportForm(NetBoxModelImportForm):
     class Meta:
         model = models.VMInterfaceExtension
-        fields = ('vm_interface', 'vlan_id', 'virtual_network', 'notes')
+        fields = ('vm_interface', 'vlan', 'virtual_network', 'notes')
 
 
 #

@@ -1,6 +1,6 @@
 from netbox.plugins import PluginMenuButton, PluginMenuItem, PluginMenu
 
-items = (
+storage_items = (
     PluginMenuItem(
         link='plugins:netbox_virtualization_plus:datastore_list',
         link_text='Datastores',
@@ -17,6 +17,8 @@ items = (
             )
         ]
     ),
+)
+network_items = (
     PluginMenuItem(
         link='plugins:netbox_virtualization_plus:virtualswitch_list',
         link_text='Virtual Switches',
@@ -49,6 +51,8 @@ items = (
             )
         ]
     ),
+)
+management_items = (
     PluginMenuItem(
         link='plugins:netbox_virtualization_plus:resourcepool_list',
         link_text='Resource Pools',
@@ -102,6 +106,6 @@ items = (
 # Define the top-level menu with icon
 menu = PluginMenu(
     label="Virtualization+",
-    groups=(("Virtualization", items),),
+    groups=(("Storage", storage_items),("Network", network_items), ("Management", management_items)),
     icon_class="mdi mdi-server",
 )

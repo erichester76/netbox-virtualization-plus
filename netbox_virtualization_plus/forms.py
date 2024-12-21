@@ -1,5 +1,5 @@
 from django import forms
-from utilities.forms import NetBoxModelForm, BulkEditForm, CSVModelForm
+from netbox.forms import NetBoxModelForm, NetBoxModelImportForm
 import netbox_virtualization_plus.models as models
 
 #
@@ -29,7 +29,7 @@ class VMSnapshotBulkEditForm(BulkEditForm):
         nullable_fields = ['description', 'snapshot_type']
 
 
-class VMSnapshotImportForm(CSVModelForm):
+class VMSnapshotImportForm(NetBoxModelImportForm):
     class Meta:
         model = models.VMSnapshot
         fields = (
@@ -71,7 +71,7 @@ class DatastoreBulkEditForm(BulkEditForm):
         nullable_fields = ['mount_point', 'storage_device', 'description']
 
 
-class DatastoreImportForm(CSVModelForm):
+class DatastoreImportForm(NetBoxModelImportForm):
     class Meta:
         model = models.Datastore
         fields = (
@@ -103,7 +103,7 @@ class VirtualDiskExtensionBulkEditForm(BulkEditForm):
         nullable_fields = ['notes']
 
 
-class VirtualDiskExtensionImportForm(CSVModelForm):
+class VirtualDiskExtensionImportForm(NetBoxModelImportForm):
     class Meta:
         model = models.VirtualDiskExtension
         fields = ('virtual_disk', 'datastore', 'notes')
@@ -132,7 +132,7 @@ class VirtualSwitchBulkEditForm(BulkEditForm):
         nullable_fields = ['switch_type', 'version', 'description']
 
 
-class VirtualSwitchImportForm(CSVModelForm):
+class VirtualSwitchImportForm(NetBoxModelImportForm):
     class Meta:
         model = models.VirtualSwitch
         fields = ('name', 'cluster', 'switch_type', 'version', 'description')
@@ -164,7 +164,7 @@ class VirtualNetworkBulkEditForm(BulkEditForm):
         nullable_fields = ['trunk_allowed_vlans', 'network_type', 'description']
 
 
-class VirtualNetworkImportForm(CSVModelForm):
+class VirtualNetworkImportForm(NetBoxModelImportForm):
     class Meta:
         model = models.VirtualNetwork
         fields = (
@@ -199,7 +199,7 @@ class VirtualSwitchUplinkBulkEditForm(BulkEditForm):
         nullable_fields = ['description', 'teaming_policy']
 
 
-class VirtualSwitchUplinkImportForm(CSVModelForm):
+class VirtualSwitchUplinkImportForm(NetBoxModelImportForm):
     class Meta:
         model = models.VirtualSwitchUplink
         fields = (
@@ -235,7 +235,7 @@ class VMInterfaceExtensionBulkEditForm(BulkEditForm):
         nullable_fields = ['notes']
 
 
-class VMInterfaceExtensionImportForm(CSVModelForm):
+class VMInterfaceExtensionImportForm(NetBoxModelImportForm):
     class Meta:
         model = models.VMInterfaceExtension
         fields = ('vm_interface', 'vlan_id', 'virtual_network', 'notes')
@@ -260,7 +260,7 @@ class ResourcePoolBulkEditForm(BulkEditForm):
         nullable_fields = ['pool_type', 'description']
 
 
-class ResourcePoolImportForm(CSVModelForm):
+class ResourcePoolImportForm(NetBoxModelImportForm):
     class Meta:
         model = models.ResourcePool
         fields = ('name', 'cluster', 'pool_type', 'description')
@@ -289,7 +289,7 @@ class ResourceSchedulingBulkEditForm(BulkEditForm):
         nullable_fields = ['description']
 
 
-class ResourceSchedulingImportForm(CSVModelForm):
+class ResourceSchedulingImportForm(NetBoxModelImportForm):
     class Meta:
         model = models.ResourceScheduling
         fields = (
@@ -321,7 +321,7 @@ class HighAvailabilityBulkEditForm(BulkEditForm):
         nullable_fields = ['description']
 
 
-class HighAvailabilityImportForm(CSVModelForm):
+class HighAvailabilityImportForm(NetBoxModelImportForm):
     class Meta:
         model = models.HighAvailability
         fields = (

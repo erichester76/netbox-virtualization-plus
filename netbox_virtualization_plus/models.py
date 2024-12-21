@@ -2,7 +2,7 @@ from django.db import models
 from django.core.exceptions import ValidationError
 from netbox.models import NetBoxModel
 from ipam.models import (
-    Vlan,
+    VLAN,
 )
 from dcim.models import (
     Device,
@@ -245,7 +245,7 @@ class VMInterfaceExtension(NetBoxModel):
         help_text="The existing VM Interface from NetBox"
     )
     vlan = models.ForeignKey(
-        to=Vlan,
+        to=VLAN,
         on_delete=models.SET_NULL,
         blank=True,
         null=True,

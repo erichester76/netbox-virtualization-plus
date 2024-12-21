@@ -214,7 +214,7 @@ class VirtualSwitchUplinkImportForm(NetBoxModelImportForm):
 class VMInterfaceExtensionForm(NetBoxModelForm):
     class Meta:
         model = models.VMInterfaceExtension
-        fields = ('vm_interface', 'vlan_id', 'virtual_network', 'notes')
+        fields = ('vm_interface', 'vlan', 'virtual_network', 'notes')
 
 
 class VMInterfaceExtensionBulkEditForm(NetBoxModelBulkEditForm):
@@ -222,7 +222,7 @@ class VMInterfaceExtensionBulkEditForm(NetBoxModelBulkEditForm):
         queryset=models.VMInterfaceExtension.objects.all(),
         widget=forms.MultipleHiddenInput()
     )
-    vlan_id = forms.ModelChoiceField(
+    vlan = forms.ModelChoiceField(
         queryset=models.Vlan.objects.all(),
         required=False
     )

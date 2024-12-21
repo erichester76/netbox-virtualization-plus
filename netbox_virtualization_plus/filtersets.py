@@ -64,7 +64,7 @@ class VirtualSwitchUplinkFilterSet(NetBoxModelFilterSet):
 class VMInterfaceExtensionFilterSet(NetBoxModelFilterSet):
     class Meta:
         model = models.VMInterfaceExtension
-        fields = ('id', 'vm_interface', 'virtual_network', 'vlan_id')
+        fields = ('id', 'vm_interface', 'virtual_network', 'vlan')
 
 
 class ResourcePoolFilterSet(NetBoxModelFilterSet):

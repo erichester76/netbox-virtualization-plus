@@ -112,9 +112,9 @@ class VMInterfaceExtensionTable(NetBoxTable):
     class Meta(NetBoxTable.Meta):
         model = models.VMInterfaceExtension
         fields = (
-            'pk', 'id', 'vm_interface', 'vlan_id', 'virtual_network', 'notes'
+            'pk', 'id', 'vm_interface', 'vlan', 'virtual_network', 'notes'
         )
-        default_columns = ('vm_interface', 'vlan_id', 'virtual_network')
+        default_columns = ('vm_interface', 'vlan', 'virtual_network')
 
 
 #

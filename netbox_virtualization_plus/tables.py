@@ -1,5 +1,5 @@
 from netbox.tables import NetBoxTable, columns
-import virtualization_plus.models as models
+import netbox_virtualization_plus.models as models
 
 class VMSnapshotTable(NetBoxTable):
     name = columns.Column(linkify=True)

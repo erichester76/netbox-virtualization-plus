@@ -37,10 +37,10 @@
 3. **Enable** the plugin in `configuration.py` (NetBox config):
    ```python
    PLUGINS = [
-       'virtualization_plus',  # or 'netbox_virtualization_plus' if named differently
+       'netbox_virtualization_plus',  
    ]
    PLUGINS_CONFIG = {
-       'virtualization_plus': {
+       'netbox_virtualization_plus': {
            # Plugin-specific settings here
        }
    }
@@ -52,7 +52,7 @@
    ```
 
 ## Usage
-After installation, the plugin’s models will appear under Plugins → Virtualization+ in the NetBox UI.
+After installation, the plugin’s models will appear under Virtualization+ in the NetBox UI.
 
 ## Contributing
 - Pull requests are welcome.

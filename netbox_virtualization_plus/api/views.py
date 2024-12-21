@@ -1,7 +1,7 @@
 from netbox.api.viewsets import NetBoxModelViewSet
-import virtualization_plus.models as models
-import virtualization_plus.filtersets as filtersets
-import virtualization_plus.api.serializers as serializers
+import netbox_virtualization_plus.models as models
+import netbox_virtualization_plus.filtersets as filtersets
+import netbox_virtualization_plus.api.serializers as serializers
 
 class VMSnapshotViewSet(NetBoxModelViewSet):
     queryset = models.VMSnapshot.objects.all()

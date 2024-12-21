@@ -1,7 +1,7 @@
 from django.urls import path
-import virtualization_plus.views as views
+import netbox_virtualization_plus.views as views
 
-app_name = 'virtualization_plus'
+app_name = 'netbox_virtualization_plus'
 
 urlpatterns = [
     # VMSnapshot

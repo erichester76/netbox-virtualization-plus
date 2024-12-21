@@ -1,6 +1,6 @@
 from django import forms
 from utilities.forms import NetBoxModelForm, BulkEditForm, CSVModelForm
-import virtualization_plus.models as models
+import netbox_virtualization_plus.models as models
 
 #
 # VMSnapshot

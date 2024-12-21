@@ -1,5 +1,5 @@
 from rest_framework.routers import DefaultRouter
-import virtualization_plus.api.views as api_views
+import netbox_virtualization_plus.api.views as api_views
 
 router = DefaultRouter()
 

@@ -1,5 +1,5 @@
 from netbox.api.serializers import NetBoxModelSerializer
-import virtualization_plus.models as models
+import netbox_virtualization_plus.models as models
 
 class VMSnapshotSerializer(NetBoxModelSerializer):
     class Meta:

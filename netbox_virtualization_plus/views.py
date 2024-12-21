@@ -1,8 +1,8 @@
 from netbox.views import generic
-import virtualization_plus.models as models
-import virtualization_plus.forms as forms
-import virtualization_plus.filtersets as filtersets
-import virtualization_plus.tables as tables
+import netbox_virtualization_plus.models as models
+import netbox_virtualization_plus.forms as forms
+import netbox_virtualization_plus.filtersets as filtersets
+import netbox_virtualization_plus.tables as tables
 
 
 #

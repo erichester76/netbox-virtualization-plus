@@ -1,6 +1,6 @@
 import django_filters
 from netbox.filtersets import NetBoxModelFilterSet
-import virtualization_plus.models as models
+import netbox_virtualization_plus.models as models
 
 class VMSnapshotFilterSet(NetBoxModelFilterSet):
     q = django_filters.CharFilter(

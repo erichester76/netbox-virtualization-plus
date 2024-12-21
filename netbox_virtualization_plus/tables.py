@@ -1,4 +1,5 @@
-from netbox.tables import NetBoxTable, columns
+from netbox.tables import NetBoxTable
+from django_tables2 import columns
 import netbox_virtualization_plus.models as models
 
 class VMSnapshotTable(NetBoxTable):

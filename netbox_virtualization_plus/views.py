@@ -34,7 +34,7 @@ class VMSnapshotBulkDeleteView(generic.BulkDeleteView):
     filterset = filtersets.VMSnapshotFilterSet
     table = tables.VMSnapshotTable
 
-class VMSnapshotImportView(generic.ObjectImportView):
+class VMSnapshotImportView(generic.BulktImportView):
     queryset = models.VMSnapshot.objects.all()
     model_form = forms.VMSnapshotImportForm
 
@@ -71,7 +71,7 @@ class DatastoreBulkDeleteView(generic.BulkDeleteView):
     filterset = filtersets.DatastoreFilterSet
     table = tables.DatastoreTable
 
-class DatastoreImportView(generic.ObjectImportView):
+class DatastoreImportView(generic.BulktImportView):
     queryset = models.Datastore.objects.all()
     model_form = forms.DatastoreImportForm
 
@@ -108,7 +108,7 @@ class VirtualDiskExtensionBulkDeleteView(generic.BulkDeleteView):
     filterset = filtersets.VirtualDiskExtensionFilterSet
     table = tables.VirtualDiskExtensionTable
 
-class VirtualDiskExtensionImportView(generic.ObjectImportView):
+class VirtualDiskExtensionImportView(generic.BulktImportView):
     queryset = models.VirtualDiskExtension.objects.all()
     model_form = forms.VirtualDiskExtensionImportForm
 
@@ -145,7 +145,7 @@ class VirtualSwitchBulkDeleteView(generic.BulkDeleteView):
     filterset = filtersets.VirtualSwitchFilterSet
     table = tables.VirtualSwitchTable
 
-class VirtualSwitchImportView(generic.ObjectImportView):
+class VirtualSwitchImportView(generic.BulktImportView):
     queryset = models.VirtualSwitch.objects.all()
     model_form = forms.VirtualSwitchImportForm
 
@@ -182,7 +182,7 @@ class VirtualNetworkBulkDeleteView(generic.BulkDeleteView):
     filterset = filtersets.VirtualNetworkFilterSet
     table = tables.VirtualNetworkTable
 
-class VirtualNetworkImportView(generic.ObjectImportView):
+class VirtualNetworkImportView(generic.BulktImportView):
     queryset = models.VirtualNetwork.objects.all()
     model_form = forms.VirtualNetworkImportForm
 
@@ -219,7 +219,7 @@ class VirtualSwitchUplinkBulkDeleteView(generic.BulkDeleteView):
     filterset = filtersets.VirtualSwitchUplinkFilterSet
     table = tables.VirtualSwitchUplinkTable
 
-class VirtualSwitchUplinkImportView(generic.ObjectImportView):
+class VirtualSwitchUplinkImportView(generic.BulktImportView):
     queryset = models.VirtualSwitchUplink.objects.all()
     model_form = forms.VirtualSwitchUplinkImportForm
 
@@ -256,7 +256,7 @@ class VMInterfaceExtensionBulkDeleteView(generic.BulkDeleteView):
     filterset = filtersets.VMInterfaceExtensionFilterSet
     table = tables.VMInterfaceExtensionTable
 
-class VMInterfaceExtensionImportView(generic.ObjectImportView):
+class VMInterfaceExtensionImportView(generic.BulktImportView):
     queryset = models.VMInterfaceExtension.objects.all()
     model_form = forms.VMInterfaceExtensionImportForm
 
@@ -293,7 +293,7 @@ class ResourcePoolBulkDeleteView(generic.BulkDeleteView):
     filterset = filtersets.ResourcePoolFilterSet
     table = tables.ResourcePoolTable
 
-class ResourcePoolImportView(generic.ObjectImportView):
+class ResourcePoolImportView(generic.BulktImportView):
     queryset = models.ResourcePool.objects.all()
     model_form = forms.ResourcePoolImportForm
 
@@ -330,7 +330,7 @@ class ResourceSchedulingBulkDeleteView(generic.BulkDeleteView):
     filterset = filtersets.ResourceSchedulingFilterSet
     table = tables.ResourceSchedulingTable
 
-class ResourceSchedulingImportView(generic.ObjectImportView):
+class ResourceSchedulingImportView(generic.BulktImportView):
     queryset = models.ResourceScheduling.objects.all()
     model_form = forms.ResourceSchedulingImportForm
 
@@ -367,7 +367,7 @@ class HighAvailabilityBulkDeleteView(generic.BulkDeleteView):
     filterset = filtersets.HighAvailabilityFilterSet
     table = tables.HighAvailabilityTable
 
-class HighAvailabilityImportView(generic.ObjectImportView):
+class HighAvailabilityImportView(generic.BulktImportView):
     queryset = models.HighAvailability.objects.all()
     model_form = forms.HighAvailabilityImportForm
 

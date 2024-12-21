@@ -1,7 +1,6 @@
-from extras.plugins import PluginMenuItem, PluginMenuButton
-from utilities.choices import ButtonColor
+from netbox.plugins import PluginMenuButton, PluginMenuItem, PluginMenu
 
-menu_items = (
+items = (
     PluginMenuItem(
         link='plugins:virtualization_plus:datastore_list',
         link_text='Datastores',
@@ -146,4 +145,11 @@ menu_items = (
             )
         ]
     ),
+)
+
+# Define the top-level menu with icon
+menu = PluginMenu(
+    label="Virtualization+",
+    groups=(("Virtualization", items),),
+    icon_class="mdi mdi-server",
 )
